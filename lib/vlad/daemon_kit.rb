@@ -10,14 +10,14 @@ class Vlad::DaemonKit
     desc "Start the daemon"
     remote_task :start_app, :roles => :app do
       commands = %w(stop start).map do |command|
-        "ruby #{latest_release}/bin/#{application} #{c}"
+        "ruby #{current_path}/bin/#{application} #{command}"
       end
       run commands.join(' && ')
     end
 
     desc "Stop the daemon"
     remote_task :stop_app, :roles => :app do
-      run "ruby #{latest_release}/bin/#{application} stop"
+      run "ruby #{current_path}/bin/#{application} stop"
     end
   end
 end
