@@ -1,6 +1,6 @@
-= vlad_daemon_kit
+= DaemonKit for Vlad
 
-* FIX (url)
+* http://github.com/raggi/vlad-daemon_kit
 
 == DESCRIPTION:
 

@@ -4,7 +4,7 @@ class Vlad::DaemonKit
   VERSION = '1.0.0'
 
   set :mkdirs, 'tmp'
-  set :shared_paths, %w(log)
+  set :shared_paths, { 'log' => 'log' }
 
   namespace :vlad do
     desc "Start the daemon"
