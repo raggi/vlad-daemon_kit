@@ -4,4 +4,3 @@ Manifest.txt
 README.rdoc
 Rakefile
 lib/vlad/daemon_kit.rb
-test/test_vlad-daemon_kit.rb

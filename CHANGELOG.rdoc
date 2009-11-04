@@ -1,3 +1,10 @@
+=== 1.0.1 / 2009-11-04
+
+* 2 minor enhancements
+
+  * Use environment option
+  * Default to production
+
 === 1.0.0 / 2009-10-30
 
 * 1 major enhancement

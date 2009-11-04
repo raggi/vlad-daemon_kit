@@ -12,7 +12,21 @@ Daemon Kit tasks for Vlad the Deployer.
 
 == SYNOPSIS:
 
+In rake:
+
   Vlad.load :type => :daemon_kit, :web => nil, :app => nil, :scm => :git
+
+In config/deploy.rb:
+  
+  set :environment, 'production'         # optional
+  set :shared_paths, { 'log' => 'log' }  # optional
+  
+  set :application, 'foo'                # mandatory
+
+Deployment:
+
+  rake vlad:setup vlad:setup_app   # first time
+  rake vlad:update vlad:start_app  # subsequent times
 
 == REQUIREMENTS:
 
