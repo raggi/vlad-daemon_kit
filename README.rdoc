@@ -28,6 +28,12 @@ Deployment:
   rake vlad:setup vlad:setup_app   # first time
   rake vlad:update vlad:start_app  # subsequent times
 
+Tools:
+
+  rake vlad:tail
+  rake vlad:tail[-f]
+  rake vlad:console
+
 == REQUIREMENTS:
 
 * vlad
