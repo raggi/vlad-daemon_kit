@@ -1,7 +1,7 @@
 require 'vlad'
 
 class Vlad::DaemonKit
-  VERSION = '1.1.0'
+  VERSION = '1.1.1'
 
   set :mkdirs, 'tmp'
   set :shared_paths, { 'log' => 'log' }
