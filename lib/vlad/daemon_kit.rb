@@ -16,10 +16,11 @@ class Vlad::DaemonKit
     end
 
     desc "Start the daemon"
-    remote_task({:start_app => :stop_app}, :extra_args, {:roles => :app}) do |task, args|
+    remote_task(:start_app, :extra_args, {:roles => :app}) do |task, args|
       extra_args = args[:extra_args]
       run "cd #{current_path} && bin/#{application} -e #{environment} #{arguments.join(' ')} #{extra_args} start"
     end
+    Rake::Task['vlad:start_app'].enhance %w(vlad:stop_app)
 
     desc "Stop the daemon"
     remote_task :stop_app, :roles => :app do
